@@ -1,0 +1,11 @@
+[Unit]
+Description=DZD2MQTT bridge
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/dzd2mqtt.py
+Restart=on-failure
+RestartSec=10000ms
+[Install]
+WantedBy=multi-user.target
